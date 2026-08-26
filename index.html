@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cronograma do Laboratório de Informática - Colégio Estadual do Campo Dr Julio Junqueira</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -88,16 +89,18 @@
 
   .week{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(5, 1fr);
     gap:14px;
     padding:20px 24px;
-    max-width:1400px;
+    max-width:100%;
     margin:0 auto;
+    overflow-x:auto;
   }
   .day{
     display:flex;
     flex-direction:column;
     gap:10px;
+    min-width:220px;
   }
   .day-head{
     font-family:'Kalam',cursive;
@@ -201,15 +204,6 @@
     border-radius:10px;
     white-space:nowrap;
   }
-  .warn-tag{
-    display:inline-block;
-    margin-top:6px;
-    font-size:0.66rem;
-    font-weight:700;
-    color:var(--warn);
-    font-family:'JetBrains Mono',monospace;
-    letter-spacing:0.03em;
-  }
   .suggestion{
     display:block;
     margin-top:6px;
@@ -230,11 +224,7 @@
     padding:10px;
   }
 
-  @media(max-width:1000px){
-    .week{grid-template-columns:1fr 1fr;}
-  }
-  @media(max-width:600px){
-    .week{grid-template-columns:1fr;}
+  @media(max-width:768px){
     .board h1{font-size:1.9rem;}
   }
 </style>
@@ -263,7 +253,13 @@
     <div class="day-head">Segunda<small>17/08</small></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>3ª aula</span><span class="turma">7° ano</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 12</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>4ª aula</span><span class="turma">7° ano</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 12</span></div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">1ª série</span></div><div class="disc">Matemática <span class="prof">· Sandra Mara</span></div><div class="activity">Khan Academy</div><div class="meta"><span>👥 26</span></div></div> <div class="suggestion">Uso de Chromes e Tablets</div></div>
+    <div class="card">
+      <div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">1ª série</span></div>
+      <div class="disc">Matemática <span class="prof">· Sandra Mara</span></div>
+      <div class="activity">Khan Academy</div>
+      <div class="meta"><span>👥 26</span></div>
+      <div class="suggestion">Uso de Chromes e Tablets</div>
+    </div>
   </div>
 
   <!-- TERÇA -->
@@ -302,18 +298,15 @@
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>1ª aula</span><span class="turma">3ª série</span></div><div class="disc">Matemática <span class="prof">· Sandra Mara</span></div><div class="activity">Enem Paraná</div><div class="meta"><span>👥 21</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>2ª aula</span><span class="turma">2ª série</span></div><div class="disc">Língua Portuguesa <span class="prof">· Gisele Kuhn</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 12</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>4ª aula</span><span class="turma">3ª série</span></div><div class="disc">Língua Portuguesa <span class="prof">· Gisele Kuhn</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 21</span></div></div>
-
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">3ª série</span></div><div class="disc">Matemática <span class="prof">· Carlos Araújo</span></div><div class="activity">Khan Academy</div><div class="meta"><span>👥 21</span></div><div class="suggestion">🖥 Laboratório de Informática</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">1ª série</span></div><div class="disc">Programação e IA <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 26</span><span class="equip">Chromebooks (32) + Tablets (12) disp.</span></div><div class="suggestion">📦 12 Tablets + 14 Chromebooks</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>6ª aula</span><span class="turma">1ª série</span></div><div class="disc">Programação e IA <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 26</span></div></div>
-
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>1ª aula</span><span class="turma">9° ano</span></div><div class="disc">Pensamento Lógico <span class="prof">· Luli</span></div><div class="activity">Khan Academy</div><div class="meta"><span>👥 16</span></div><div class="suggestion">🖥 Laboratório de Informática</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>1ª aula</span><span class="turma">6° ano</span></div><div class="disc">Língua Portuguesa <span class="prof">· Vera</span></div><div class="activity">Leia Paraná</div><div class="meta"><span>👥 20</span></div><div class="suggestion">🖥 Laboratório de Informática</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>2ª aula</span><span class="turma">8° ano</span></div><div class="disc">Língua Portuguesa <span class="prof">· Gisele Kuhn</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 15</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>3ª aula</span><span class="turma">6° ano</span></div><div class="disc">Matemática <span class="prof">· Evaldo</span></div><div class="activity">Matific</div><div class="meta"><span>👥 20</span><span class="equip">4/32 Chromebooks</span></div></div>
-
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>4ª aula</span><span class="turma">8° ano</span></div><div class="disc">Programação e Robótica <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 15</span><span class="equip">15/32 Chromebooks</span></div><div class="suggestion">📦 15 Chromebooks (refeitório)</div></div>
-       <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>5ª aula</span><span class="turma">7° ano</span></div><div class="disc">Redação e Leitura <span class="prof">· Mônica</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 12</span><span class="equip">12/32 Chromebooks</span></div><div class="suggestion">📦 12 Chromebooks (refeitório)</div></div>
+    <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>5ª aula</span><span class="turma">7° ano</span></div><div class="disc">Redação e Leitura <span class="prof">· Mônica</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 12</span><span class="equip">12/32 Chromebooks</span></div><div class="suggestion">📦 12 Chromebooks (refeitório)</div></div>
   </div>
 
   <!-- SEXTA -->
@@ -324,7 +317,6 @@
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>3ª aula</span><span class="turma">2ª série</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 12</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>4ª aula</span><span class="turma">2ª série</span></div><div class="disc">Literatura e Prod. Textos <span class="prof">· Mônica</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 12</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">3ª série</span></div><div class="disc">Inglês <span class="prof">· Luis Fernando</span></div><div class="activity">Enem Paraná</div><div class="meta"><span>👥 21</span></div></div>
-
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>1ª aula</span><span class="turma">6° ano</span></div><div class="disc">Matemática <span class="prof">· Carlos Araújo</span></div><div class="activity">Matific</div><div class="meta"><span>👥 12</span><span class="equip">Chromebooks (32) + Tablets (12) disp.</span></div><div class="suggestion">📦 12 Tablets</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>1ª aula</span><span class="turma">9° ano</span></div><div class="disc">Inglês <span class="prof">· Luis Fernando</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 16</span></div><div class="suggestion">🖥 Laboratório de Informática</div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>2ª aula</span><span class="turma">6° ano</span></div><div class="disc">Matemática <span class="prof">· Evaldo</span></div><div class="activity">Matific</div><div class="meta"><span>👥 20</span></div></div>
@@ -334,7 +326,6 @@
   </div>
 
 </div>
-
 
 </body>
 </html>
