@@ -100,7 +100,7 @@
     display:flex;
     flex-direction:column;
     gap:10px;
-    min-width:220px;
+    min-width:240px;
   }
   .day-head{
     font-family:'Kalam',cursive;
@@ -138,6 +138,17 @@
   .qua .day-head{background:var(--qua);}
   .qui .day-head{background:var(--qui);}
   .sex .day-head{background:var(--sex);}
+
+  /* Estilo para cartões lado a lado */
+  .time-group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  .time-group .card {
+    flex: 1;
+    min-width: 0;
+  }
 
   .card{
     background:var(--card);
@@ -265,13 +276,49 @@
   <!-- TERÇA -->
   <div class="day ter">
     <div class="day-head">Terça<small>18/08</small></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>1ª aula</span><span class="turma">9° ano</span></div><div class="disc">Inglês <span class="prof">· Luli</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 16</span></div><div class="suggestion">Uso de Chromes e Tablets</div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>2ª aula</span><span class="turma">9° ano</span></div><div class="disc">Inglês <span class="prof">· Luli</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 16</span></div><div class="suggestion">Uso de Chromes e Tablets</div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>1ª aula</span><span class="turma">9° ano</span></div><div class="disc">Programação e Robótica <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 16</span></div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>2ª aula</span><span class="turma">9° ano</span></div><div class="disc">Programação e Robótica <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 16</span></div></div>
+    
+    <!-- 1ª AULA LADO A LADO -->
+    <div class="time-group">
+      <div class="card">
+        <div class="row-top"><span class="time"><span class="dot manha"></span>1ª aula</span><span class="turma">9° ano</span></div>
+        <div class="disc">Programação <span class="prof">· Luli</span></div>
+        <div class="activity">Alura</div>
+        <div class="meta"><span>👥 16</span></div>
+      </div>
+      <div class="card">
+        <div class="row-top"><span class="time"><span class="dot manha"></span>1ª aula</span><span class="turma">9° ano</span></div>
+        <div class="disc">Inglês <span class="prof">· Paulina</span></div>
+        <div class="activity">Inglês Paraná</div>
+        <div class="meta"><span>👥 16</span></div>
+        <div class="suggestion">Chromes</div>
+      </div>
+    </div>
+
+    <!-- 2ª AULA LADO A LADO -->
+    <div class="time-group">
+      <div class="card">
+        <div class="row-top"><span class="time"><span class="dot manha"></span>2ª aula</span><span class="turma">9° ano</span></div>
+        <div class="disc">Programação <span class="prof">· Luli</span></div>
+        <div class="activity">Alura</div>
+        <div class="meta"><span>👥 16</span></div>
+      </div>
+      <div class="card">
+        <div class="row-top"><span class="time"><span class="dot manha"></span>2ª aula</span><span class="turma">9° ano</span></div>
+        <div class="disc">Inglês <span class="prof">· Paulina</span></div>
+        <div class="activity">Inglês Paraná</div>
+        <div class="meta"><span>👥 16</span></div>
+        <div class="suggestion">Chromes</div>
+      </div>
+    </div>
+
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>3ª aula</span><span class="turma">3ª série</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 21</span></div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">8° ano</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 15</span></div></div>
-    <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">9° ano</span></div><div class="disc">Língua Portuguesa <span class="prof">· Gisele Kuhn</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 16</span></div></div>
+    
+    <!-- 5ª AULA LADO A LADO -->
+    <div class="time-group">
+      <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">8° ano</span></div><div class="disc">Inglês <span class="prof">· Paulina</span></div><div class="activity">Inglês Paraná</div><div class="meta"><span>👥 15</span></div></div>
+      <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>5ª aula</span><span class="turma">9° ano</span></div><div class="disc">Português <span class="prof">· Gisele</span></div><div class="activity">Redação Paraná</div><div class="meta"><span>👥 16</span></div></div>
+    </div>
+
     <div class="card"><div class="row-top"><span class="time"><span class="dot manha"></span>6ª aula</span><span class="turma">2ª série</span></div><div class="disc">Matemática <span class="prof">· Luli</span></div><div class="activity">Khan Academy</div><div class="meta"><span>👥 12</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>3ª aula</span><span class="turma">8° ano</span></div><div class="disc">Programação e Robótica <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 15</span></div></div>
     <div class="card"><div class="row-top"><span class="time"><span class="dot tarde"></span>4ª aula</span><span class="turma">6° ano</span></div><div class="disc">Programação e Robótica <span class="prof">· Luli</span></div><div class="activity">Alura</div><div class="meta"><span>👥 20</span><span class="equip">4/32 Chromebooks</span></div></div>
